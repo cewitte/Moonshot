@@ -9,15 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView {
-            // LazyVStack and LazyHStack draw content as needed, using less System resources
-            LazyVStack(spacing: 10) {
-                ForEach(0..<100) {
-                    Text("Item \(String($0))")
-                        .font(.title)
+        NavigationStack {
+            List(1..<100) { row in
+                NavigationLink("Row \(row)") {
+                    Text("Detail \(row)")
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .navigationTitle("Moonshot")
         }
     }
 }
