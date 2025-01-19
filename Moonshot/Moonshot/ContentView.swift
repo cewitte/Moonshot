@@ -19,26 +19,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-      Button("Decode JSON") {
-        let input = """
-        {
-            "name": "Taylor",
-            "address": {
-                "street": "555, Taylor Avenue",
-                "city": "Nashville"
+        Image(.god)
+            .resizable()
+            .scaledToFit()
+            .containerRelativeFrame(.horizontal) { size, axis in
+                size * 0.8
             }
-        }
-        """
-          
-          let data = Data(input.utf8)
-          let decoder = JSONDecoder()
-        
-          
-          if let user = try? decoder.decode(User.self, from: data) {
-              print(user.address.city)
-          }
-        
-      }
+     
     }
 }
 
