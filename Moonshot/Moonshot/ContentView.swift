@@ -34,10 +34,8 @@ struct ContentView: View {
             let data = Data(input.utf8)
             let decoder = JSONDecoder()
             if let user = try? decoder.decode(User.self, from: data) {
-                
                 print(user.address.street)
                 print(user.address.city)
-                
             }
             
             
