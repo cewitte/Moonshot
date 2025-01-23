@@ -6,3 +6,5 @@ An app that lets users learn about the missions and astronauts that formed NASAâ
 
 ![Mission View UI](/mission_view.png)
 ![Mission View Crew Details](/mission_crew_details.png)
+![Astronaut View](/astronaut_view.png)
+
