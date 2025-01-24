@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C8E726342D445BCD00C3C575 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E726332D445BCD00C3C575 /* DividerView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		043086A62CB1A5790049DC5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		043086952CB1A5780049DC5C /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043086A52CB1A5790049DC5C /* MoonshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		043086AF2CB1A5790049DC5C /* MoonshotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonshotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E726332D445BCD00C3C575 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DividerView.swift; path = Moonshot/DividerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		0430868C2CB1A5780049DC5C = {
 			isa = PBXGroup;
 			children = (
+				C8E726332D445BCD00C3C575 /* DividerView.swift */,
 				043086972CB1A5780049DC5C /* Moonshot */,
 				043086A82CB1A5790049DC5C /* MoonshotTests */,
 				043086B22CB1A5790049DC5C /* MoonshotUITests */,
@@ -236,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E726342D445BCD00C3C575 /* DividerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
