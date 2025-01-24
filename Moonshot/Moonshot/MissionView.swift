@@ -26,7 +26,11 @@ struct MissionView: View {
                         width * 0.6
                     }
                     .padding(.top)
-             
+                
+                // Challenge 1. Add the launch date to MissionView, below the mission badge. You might choose to format this differently given that more space is available, but it’s down to you.
+                Text(mission.formmattedLaunchDate)
+                    .font(.title2.bold())
+                    .padding(.top)
                 
                 VStack(alignment: .leading) {
                     Rectangle()
@@ -106,7 +110,7 @@ struct MissionView: View {
     let missions: [Mission] = Bundle.main.decode("missions.json")
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     
-    return MissionView(mission: missions[0], astronauts: astronauts)
+    return MissionView(mission: missions[2], astronauts: astronauts)
         .preferredColorScheme(.dark)
 }
 
