@@ -15,3 +15,5 @@ In the end of the project, Paul laves three challenges for the student (which is
 You can see the final result in the animated gif below:
 
 ![Final Challenge](/final_challenge.gif)
+
+Made with :heart: by @cewitte
