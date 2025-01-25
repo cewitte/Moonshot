@@ -5,16 +5,6 @@
 //  Created by Carlos Eduardo Witte on 05/10/24.
 //
 
-struct User: Codable {
-    let name: String
-    let address: Address
-}
-
-struct Address: Codable {
-    let street: String
-    let city: String
-}
-
 import SwiftUI
 
 struct ContentView: View {
@@ -26,48 +16,21 @@ struct ContentView: View {
         GridItem(.adaptive(minimum: 150))
     ]
     
+    @State private var showingGrid = false
+    
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(missions) { mission in
-                        NavigationLink {
-                            MissionView(mission: mission, astronauts: astronauts)
-                        } label: {
-                            VStack {
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-                                
-                                VStack {
-                                    Text(mission.displayName)
-                                        .font(.headline)
-                                        .foregroundStyle(.white)
-                                    
-                                    Text(mission.formmattedLaunchDate)
-                                        .font(.caption)
-                                        .foregroundStyle(.white.opacity(0.5))
-                                }
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
-                            }
-                            .clipShape(.rect(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            )
-                            
-                        }
-                    }
+        
+        // Challenge 3. For a tough challenge, add a toolbar item to ContentView that toggles between showing missions as a grid and as a list.
+        TabView {
+            GridLayoutView(astronauts: astronauts, missions: missions)
+                .tabItem {
+                    Label("Grid", systemImage: "square.grid.2x2")
                 }
-                .padding([.horizontal, .bottom])
+                    
+            ListLayoutView(astronauts: astronauts, missions: missions)
+                .tabItem {
+                    Label("List", systemImage: "list.star")
             }
-            .navigationTitle(Text("Moonshot"))
-            .background(.darkBackground)
-            .preferredColorScheme(.dark)
         }
     }
 }
