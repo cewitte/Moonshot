@@ -17,13 +17,10 @@ struct ListLayoutView: View {
     ]
     
     var body: some View {
+        // Project 9's Challenge 3: Return to project 8 (Moonshot), and upgrade it to use NavigationLink(value:). This means adding Hashable conformance, and thinking carefully how to use navigationDestination().
         NavigationStack {
-            List {
-                
-                ForEach(missions) { mission in
-                    NavigationLink {
-                        MissionView(mission: mission)
-                    } label: {
+            List(missions) { mission in
+                NavigationLink(value: mission) {
                         HStack {
                             Image(mission.image)
                                 .resizable()
@@ -38,18 +35,18 @@ struct ListLayoutView: View {
                                 Text(mission.formmattedLaunchDate)
                                     .font(.caption)
                             }
-                            
                         }
-                        
-                    }
+                    
                 }
             }
             .listStyle(.plain)
             .listRowBackground(Color.darkBackground)
             .navigationTitle(Text("Moonshot"))
-//            .background(.darkBackground)
             .preferredColorScheme(.dark)
             .padding(.top, 20)
+            .navigationDestination(for: Mission.self) { mission in
+                MissionView(mission: mission)
+            }
         }
     }
 }
