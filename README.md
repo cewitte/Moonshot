@@ -3,17 +3,13 @@
 ## Project 8
 
 An app that lets users learn about the missions and astronauts that formed NASA’s Apollo space program (by Paul Hudson - @twostraws).
+## Paul's Project 9 - Challenge 3 resolution
+In the end of the project, Paul laves three challenges for the student. During **Project 9**, the challenge was to...
 
-## Paul's challenges resolution
+*Return to project 8 (Moonshot), and upgrade it to use `NavigationLink(value:)`. This means adding `Hashable` conformance, and thinking carefully how to use `navigationDestination()`.*
 
-In the end of the project, Paul laves three challenges for the student (which is what the branch `challenge` is all about):
+You can see the final result in the animated gif below, which is the same as previous final version, but using the `navigationDestination` technique:
 
-1. Add the launch date to MissionView, below the mission badge. You might choose to format this differently given that more space is available, but it’s down to you.
-2. Extract one or two pieces of view code into their own new SwiftUI views – the horizontal scroll view in MissionView is a great candidate, but if you followed my styling then you could also move the Rectangle dividers out too.
-3. For a tough challenge, add a toolbar item to ContentView that toggles between showing missions as a grid and as a list.
-
-You can see the final result in the animated gif below:
-
-![Final Challenge](/final_challenge.gif)
+![Project 9 - Challenge 3](/project_9_challenge_3.gif)
 
 Made with :heart: by @cewitte
